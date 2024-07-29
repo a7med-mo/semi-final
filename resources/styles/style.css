@@ -1,69 +1,22 @@
+/* 
+    1. Global CSS
+    2. Header CSS
+        2_1. global header css
+        2_2. logo css
+        2_3. nav css
+        2_4. dropdown css
+        2_5. header button css
+    
+*/
+
+
+
+
+/* ==================================1. Start Global CSS================================== */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap');
 
-:root {
-    --tj-ff-body: "Sora", sans-serif;
-    --tj-ff-heading: "Sora", sans-serif;
-    --tj-ff-russo: "Russo One", sans-serif;
-    --tj-ff-fontawesome: "Font Awesome 6 Pro";
-    --tj-body: #dddddd;
-    --tj-white: #ffffff;
-    --tj-off-white: #f6f3fc;
-    --tj-black: #000000;
-    --tj-black-2: #050709;
-    --tj-black3: #5c6266;
-    --tj-black4: #585859;
-    --tj-h3-black: #0b0410;
-    --tj-heading-primary: #102039;
-    --tj-heading-secondary: #ea1826;
-    --tj-theme-primary: #8750f7;
-    --tj-theme-primary-1: #2400ff;
-    --tj-theme-primary-2: #9b8dff;
-    --tj-theme-primary-3: #4654f9;
-    --tj-theme-h3-primary-1: #814cec;
-    --tj-theme-secondary: #2a1454;
-    --tj-theme-accent-1: #0f0715;
-    --tj-theme-accent-2: #140c1c;
-    --tj-grey-1: #747779;
-    --tj-grey-2: #d9d9d9;
-    --tj-grey-3: #dddddd;
-    --tj-grey-4: #22272c;
-    --tj-grey-5: #636363;
-    --tj-grey-6: #1b262e;
-    --tj-bg: #0c1115;
-    --tj-bg-2: #0e1418;
-    --tj-bg-3: #10171c;
-    --tj-bg-4: #151b1f;
-    --tj-h3-bg: #15091d;
-    --tj-border: #1b2227;
-    --tj-border1: #2a343c;
-    --tj-fw-normal: normal;
-    --tj-fw-elight: 200;
-    --tj-fw-light: 300;
-    --tj-fw-regular: 400;
-    --tj-fw-medium: 500;
-    --tj-fw-sbold: 600;
-    --tj-fw-bold: 700;
-    --tj-fw-ebold: 800;
-    --tj-fw-black: 900;
-    --tj-fz-body: 16px;
-    --tj-fz-btn: 15px;
-    --tj-fz-p: 18px;
-    --tj-fz-h1: 65px;
-    --tj-fz-h2: 45px;
-    --tj-fz-h3: 30px;
-    --tj-fz-h4: 24px;
-    --tj-fz-h5: 22px;
-    --tj-fz-h6: 18px;
-    --tj-fz-sub-title: 36px;
-}
-
-body {
-    font-family: var(--tj-ff-body);
-    font-size: var(--tj-fz-body);
-    font-weight: var(--tj-fw-regular);
-    color: var(--tj-body);
-    background-color: var(--tj-theme-accent-1);
-}
 
 * {
     margin: 0;
@@ -71,8 +24,12 @@ body {
     box-sizing: border-box;
 }
 
-html {
+body {
     font-family: "Sora", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #dddddd;
+    background-color: #0f0715;
 }
 
 .container {
@@ -88,15 +45,29 @@ ul {
     list-style: none;
 }
 
+
+/* ===================================1. end Global CSS=================================== */
+
+
+/* *************************************************************************************** */
+
+
+/* ==================================1. Start Header CSS================================== */
+
+
+/* ------------------------------2_1. start global header css----------------------------- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #0f0715;
     padding-block: 2rem .93rem;
-
 }
 
+/* -------------------------------2_1. end global header css------------------------------ */
+
+
+/* ----------------------------------2_2. start logo css---------------------------------- */
 header .logo {
     display: flex;
     align-items: center;
@@ -112,6 +83,10 @@ header .box-link-logo a {
     font-weight: 600;
 }
 
+/* -----------------------------------2_2. end logo css----------------------------------- */
+
+
+/* -----------------------------------2_3. start nav css---------------------------------- */
 nav,
 nav ul {
     display: flex;
@@ -119,17 +94,11 @@ nav ul {
     gap: 1.25rem;
 }
 
-nav ul li {
-    height: 100%;
-}
-
-
 nav ul li a {
     font-size: .93rem;
     font-weight: 600;
     text-transform: capitalize;
 }
-
 
 nav ul li::after {
     content: "";
@@ -140,11 +109,8 @@ nav ul li::after {
     transition: .3s;
 }
 
-nav>ul>li.active::after {
-    width: 100%;
-}
-
-nav>ul>li:hover:after {
+nav>ul>li.active::after,
+nav>ul>li:hover::after {
     width: 100%;
 }
 
@@ -161,19 +127,30 @@ nav>ul>li .icon-nav-minus {
     display: none;
 }
 
+.dropdown:hover .icon-nav-plus {
+    display: none;
+}
+
+.dropdown:hover .icon-nav-minus {
+    display: inline;
+}
+
+/* ------------------------------------2_3. end nav css----------------------------------- */
+
+
+/* ---------------------------------2_4. start dropdown css-------------------------------- */
 .dropdown-content {
     position: absolute;
+    width: 200px;
     flex-direction: column;
     align-items: start;
     gap: .1rem;
-    width: 200px;
     top: 95px;
     left: 67%;
     box-shadow: 0 30px 30px#8850f734;
     visibility: hidden;
     opacity: 0;
     transition: .3s;
-
 }
 
 .dropdown-content>li {
@@ -182,57 +159,25 @@ nav>ul>li .icon-nav-minus {
 
 .dropdown-content>li>a {
     display: flex;
-    text-transform: capitalize;
     padding: 1.2rem 1.5rem;
     background: #000;
+    text-transform: capitalize;
     transition: .3s;
 }
 
 .dropdown-content>li>a:hover {
     color: #8750f7;
-
 }
-
-.dropdown {}
 
 .dropdown:hover .dropdown-content {
     visibility: visible;
     opacity: 1;
 }
 
-.dropdown:hover .icon-nav-minus {
-    display: inline;
-
-}
-
-.dropdown:hover .icon-nav-plus {
-    display: none;
-
-}
-
-/* nav>ul>li:hover{
-    visibility: visible;
-} */
+/* ----------------------------------2_4. end dropdown css--------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------2_5. start header button css------------------------------ */
 .header-btn {
     padding: 1.01rem 2.18rem;
     font-size: .93rem;
@@ -240,7 +185,6 @@ nav>ul>li .icon-nav-minus {
     text-transform: capitalize;
     border-radius: 40px;
     border: none;
-    /* background: linear-gradient(to right, #8750f7, #2a1454); */
     background: #2a1454;
     color: #fff;
     transition: 1s;
@@ -254,7 +198,6 @@ nav>ul>li .icon-nav-minus {
     content: "";
     width: 4rem;
     height: 100%;
-    /* background: rgba(255, 255, 255, 0.364); */
     background: #8850f7c2;
     filter: blur(10px);
     position: absolute;
@@ -269,36 +212,14 @@ nav>ul>li .icon-nav-minus {
     left: 70%;
 }
 
-.header-btn:hover{
+.header-btn:hover {
     color: #ffffffcc;
 }
 
+/* -------------------------------2_5. end header button css------------------------------- */
 
 
+/* ===================================1. end Header CSS=================================== */
 
 
-
-
-
-
-/* .header-btn:hover {
-    background: linear-gradient(to left, #8750f7, #2a1454);
-} */
-
-
-
-/* .header-btn {
-    padding: 1.01rem 2.18rem;
-    font-size: .93rem;
-    font-weight: 800;
-    text-transform: capitalize;
-    border-radius: 40px;
-    border: none;
-    background: linear-gradient(to right, #8750f7, #2a1454);
-    color: #fff;
-    transition: 1s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-} */
-
+/* *************************************************************************************** */
