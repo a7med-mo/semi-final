@@ -72,7 +72,12 @@
         2_3. nav css
         2_4. dropdown css
         2_5. header button css
-    3.
+    3.Hero Section CSS
+        3_1. global hero section css
+        3_2. hero section left css
+        3_3. hero section right css
+        3_4. hero section bottom css
+    
 */
 
 
@@ -306,27 +311,30 @@ nav>ul>li .icon-nav-minus {
 /* *************************************************************************************** */
 
 
+/* ================================3.Start Hero Section CSS================================= */
 
+
+/* -----------------------------3_1.start global hero section css----------------------------- */
 .hero-section {
     width: 100%;
+    padding-block: 3.5rem 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-block: 3.5rem 0;
+    flex-wrap: wrap;
     position: relative;
 }
 
 .hero-section::before {
     content: "HI";
+    font-size: 200px;
+    font-weight: 800;
+    -webkit-text-stroke: 1.5px #2a1454;
     position: absolute;
     top: 19%;
     left: 28%;
-    font-size: 200px;
-    font-weight: 800;
-    opacity: 0.6;
     z-index: -1;
-    -webkit-text-stroke: 1.5px #2a1454;
+    opacity: 0.6;
     color: transparent;
     animation-name: identifier;
     animation-duration: 6s;
@@ -348,6 +356,10 @@ nav>ul>li .icon-nav-minus {
     }
 }
 
+/* ------------------------------3_1.end global hero section css------------------------------ */
+
+
+/* ------------------------------3_2.start hero section left css------------------------------ */
 .hero-section-left {
     width: 50%;
 }
@@ -362,26 +374,19 @@ nav>ul>li .icon-nav-minus {
     font-size: 3.125rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 0.93rem;
     background: linear-gradient(to right, #8851f7, #f4efff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 0.93rem;
 }
 
 .hero-section-left p {
+    width: 85%;
     font-size: 1.35rem;
     font-weight: 400;
     color: #ddd;
     line-height: 2rem;
-    width: 85%;
 }
-
-
-
-
-
-
-
 
 .hero-section-left div {
     display: flex;
@@ -390,19 +395,22 @@ nav>ul>li .icon-nav-minus {
     margin-top: 3.125rem;
 }
 
+.icone-download {
+    font-weight: 600;
+}
 
 .hero-section-left div button {
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: capitalize;
     display: flex;
     align-items: center;
     gap: .5rem;
     padding: 1.0625rem 2.1875rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: capitalize;
     background: transparent;
+    color: #8750f7;
     border: 1px solid #8750f7;
     border-radius: 3.125rem;
-    color: #8750f7;
     transition: .3s;
 }
 
@@ -411,18 +419,6 @@ nav>ul>li .icon-nav-minus {
     color: #fff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .hero-section-left div ul {
     display: flex;
     align-items: center;
@@ -430,16 +426,16 @@ nav>ul>li .icon-nav-minus {
 }
 
 .hero-section-left div ul li a {
-    color: #8750f7;
     width: 2.1875rem;
     height: 2.1875rem;
-    border: 1px solid #8750f7;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    border: 1px solid #8750f7;
+    border-radius: 50%;
+    color: #8750f7;
     text-decoration: none;
+    position: relative;
     z-index: 1;
     transition: 0.2s;
 }
@@ -449,11 +445,11 @@ nav>ul>li .icon-nav-minus {
 }
 
 .hero-section-left div ul li a::before {
-    position: absolute;
     content: "";
-    display: block;
     width: 100%;
     height: 100%;
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
     border-radius: 50%;
@@ -467,41 +463,10 @@ nav>ul>li .icon-nav-minus {
     scale: 1;
 }
 
+/* -------------------------------3_2.end hero section left css------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .hero-section-right {
-    width: 56%;
-    overflow: hidden;
-} */
-
-
+/* ------------------------------3_3.start hero section right css------------------------------ */
 .hero-section-right div img {
     border: #2a1454 2px solid;
     border-radius: 2.5rem;
@@ -527,30 +492,10 @@ nav>ul>li .icon-nav-minus {
     box-shadow: 0 0 350px 130px #9a69fb42;
 }
 
+/* -------------------------------3_3.end hero section right css------------------------------- */
 
 
-
-
-
-
-
-
-.icone-download {
-    font-weight: 600;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------3_4.start hero section bottom css----------------------------- */
 .hero-section-bottom {
     width: 100%;
     margin: 3rem 0;
@@ -578,3 +523,8 @@ nav>ul>li .icon-nav-minus {
     font-size: 20px;
     font-weight: 400;
 }
+
+/* -------------------------------3_4.end hero section bottom css------------------------------ */
+
+
+/* =================================3.End Hero Section CSS================================== */
