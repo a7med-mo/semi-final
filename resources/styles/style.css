@@ -77,7 +77,9 @@
         3_2. hero section left css
         3_3. hero section right css
         3_4. hero section bottom css
-    
+    .media screen
+        _1. media screen table
+        _2. media screen mobile
 */
 
 
@@ -106,7 +108,7 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 56rem;
     margin: auto;
 }
 
@@ -162,6 +164,8 @@ header .box-link-logo a {
 
 
 /* -----------------------------------2_3. start nav css---------------------------------- */
+
+
 nav,
 nav ul {
     display: flex;
@@ -304,6 +308,13 @@ nav>ul>li .icon-nav-minus {
 
 /* -------------------------------2_5. end header button css------------------------------- */
 
+.nav-menu .menu-icon {
+    font-size: 30px;
+    margin-left: .9rem;
+    cursor: pointer;
+    display: none;
+}
+
 
 /* ===================================1. end Header CSS=================================== */
 
@@ -314,10 +325,10 @@ nav>ul>li .icon-nav-minus {
 /* ================================3.Start Hero Section CSS================================= */
 
 
-/* -----------------------------3_1.start global hero section css----------------------------- */
+/* -----------------------------3_1.start global hero section css--------------------------- */
 .hero-section {
     width: 100%;
-    padding-block: 3.5rem 0;
+    padding-block: 2.5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -325,9 +336,23 @@ nav>ul>li .icon-nav-minus {
     position: relative;
 }
 
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: 0;
+    width: 0px;
+    height: 130px;
+    rotate: 35deg;
+    opacity: 1;
+    transition: 0.5s;
+    box-shadow: 0 0 350px 130px #9a69fb43;
+    z-index: -2;
+}
+
 .hero-section::before {
     content: "HI";
-    font-size: 200px;
+    font-size: 180px;
     font-weight: 800;
     -webkit-text-stroke: 1.5px #2a1454;
     position: absolute;
@@ -348,7 +373,7 @@ nav>ul>li .icon-nav-minus {
     }
 
     50% {
-        scale: 1.3;
+        scale: 1.1;
     }
 
     100% {
@@ -356,10 +381,10 @@ nav>ul>li .icon-nav-minus {
     }
 }
 
-/* ------------------------------3_1.end global hero section css------------------------------ */
+/* ------------------------------3_1.end global hero section css---------------------------- */
 
 
-/* ------------------------------3_2.start hero section left css------------------------------ */
+/* ------------------------------3_2.start hero section left css---------------------------- */
 .hero-section-left {
     width: 50%;
 }
@@ -380,6 +405,16 @@ nav>ul>li .icon-nav-minus {
     margin-bottom: 0.93rem;
 }
 
+.hero-section-left-img-photo {
+    display: none;
+    position: absolute;
+    z-index: -5;
+}
+
+.hero-section-left-img-photo img {
+    display: none;
+}
+
 .hero-section-left p {
     width: 85%;
     font-size: 1.35rem;
@@ -390,8 +425,9 @@ nav>ul>li .icon-nav-minus {
 
 .hero-section-left div {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 3.125rem;
 }
 
@@ -463,39 +499,51 @@ nav>ul>li .icon-nav-minus {
     scale: 1;
 }
 
-/* -------------------------------3_2.end hero section left css------------------------------- */
+/* -------------------------------3_2.end hero section left css----------------------------- */
 
 
-/* ------------------------------3_3.start hero section right css------------------------------ */
+/* -----------------------------3_3.start hero section right css---------------------------- */
+.hero-section-right {
+    width: 50%;
+}
+
+.hero-section-left-img-photo img,
 .hero-section-right div img {
+    width: 100%;
     border: #2a1454 2px solid;
     border-radius: 2.5rem;
     rotate: 5deg;
     transition: 0.5s;
 }
 
+.hero-section-left-img-photo img:hover,
 .hero-section-right div img:hover {
     border: #8750f7 2px solid;
     rotate: 0deg;
 }
 
-.hero-section-right div::before {
+.hero-section-left-img-photo::after,
+.hero-section-right div::after {
     content: "";
     position: absolute;
-    top: -20%;
-    right: 150px;
+    top: 35%;
+    right: 30%;
     width: 0px;
-    height: 600px;
-    rotate: 35deg;
+    height: 130px;
     opacity: 1;
     transition: 0.5s;
-    box-shadow: 0 0 350px 130px #9a69fb42;
+    box-shadow: 0 0 350px 130px #9a69fb39;
+    z-index: -2;
 }
 
-/* -------------------------------3_3.end hero section right css------------------------------- */
+.hero-section-left-img-photo::after {
+    display: none;
+}
+
+/* ------------------------------3_3.end hero section right css----------------------------- */
 
 
-/* ------------------------------3_4.start hero section bottom css----------------------------- */
+/* -----------------------------3_4.start hero section bottom css--------------------------- */
 .hero-section-bottom {
     width: 100%;
     margin: 3rem 0;
@@ -503,16 +551,20 @@ nav>ul>li .icon-nav-minus {
 
 
 .hero-section-bottom ul {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 3rem;
 }
 
 .hero-section-bottom ul li {
+    width: calc((100% - 9rem) / 4);
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    gap: .6rem;
+
+    gap: .8rem;
 }
 
 .hero-section-bottom ul li h3 {
@@ -520,11 +572,163 @@ nav>ul>li .icon-nav-minus {
 }
 
 .hero-section-bottom ul li span {
-    font-size: 20px;
+    width: 5rem;
+    font-size: 1.10rem;
     font-weight: 400;
+    line-height: 1.5rem;
 }
 
-/* -------------------------------3_4.end hero section bottom css------------------------------ */
+/* ------------------------------3_4.end hero section bottom css---------------------------- */
 
 
 /* =================================3.End Hero Section CSS================================== */
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 43rem;
+    }
+
+    /****************** header ******************/
+
+    nav ul {
+        display: none;
+    }
+
+    .nav-menu .menu-icon {
+        font-size: 30px;
+        margin-left: .9rem;
+        display: inline;
+    }
+
+    /****************** hero section ******************/
+
+    .hero-section::before {
+        font-size: 150px;
+    }
+
+    .hero-section-left span {
+        font-size: 1.9rem;
+    }
+
+    .hero-section-left h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-section-left p {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .hero-section-left div {
+        margin-top: 2rem;
+    }
+
+    .hero-section-bottom ul {
+        gap: 1.6rem;
+    }
+
+    .hero-section-bottom ul li {
+        width: calc((100% - 3rem) / 2);
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:765px) {
+    .container {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    /****************** header ******************/
+
+    header .box-link-logo a {
+        display: none;
+    }
+
+    /****************** hero section ******************/
+
+    .hero-section::after {
+        top: -5%;
+        right: 5%;
+    }
+
+    .hero-section-left {
+        width: 100%;
+    }
+
+    .hero-section-left span {
+        font-size: 1.9rem;
+    }
+
+    .hero-section-left h1 {
+        font-size: 2.4rem;
+        width: 75%;
+    }
+
+    .hero-section-left .hero-section-left-img-photo {
+        margin: auto;
+        width: 90%;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-section-left-img-photo::after {
+        display: block;
+    }
+
+    .hero-section-left .hero-section-left-img-photo img {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin: 2rem 0;
+    }
+
+    .hero-section-right {
+        display: none;
+    }
+
+    .hero-section-right div img {
+        display: none;
+    }
+
+    .hero-section-left p {
+        width: 95%;
+        font-size: 1.3rem;
+    }
+
+    .hero-section-left div {
+        width: 100%;
+        flex-direction: row;
+        align-items: space-between;
+    }
+
+    .hero-section-bottom ul {
+        gap: 1.6rem;
+    }
+
+    .hero-section-bottom ul li {
+        flex-direction: column;
+        align-items: center;
+        width: calc((100% - 3rem) / 2);
+        justify-content: center;
+    }
+
+    .hero-section-bottom ul li h3 {
+        font-size: 3rem;
+    }
+
+    .hero-section-bottom ul li span {
+        font-size: 1.05rem;
+    }
+
+}
