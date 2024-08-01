@@ -106,11 +106,6 @@ body {
 
 }
 
-/* .container {
-    width: 56rem;
-    margin: auto;
-} */
-
 a {
     text-decoration: none;
     color: #fff;
@@ -124,7 +119,9 @@ ul {
 /* ===================================1. end Global CSS=================================== */
 
 
+
 /* *************************************************************************************** */
+
 
 
 /* ==================================1. Start Header CSS================================== */
@@ -274,8 +271,8 @@ nav>ul>li .icon-nav-minus {
     font-size: .93rem;
     font-weight: 800;
     text-transform: capitalize;
-    border-radius: 40px;
     border: none;
+    border-radius: 40px;
     background: #2a1454;
     color: #fff;
     transition: 1s;
@@ -321,7 +318,9 @@ nav>ul>li .icon-nav-minus {
 /* ===================================1. end Header CSS=================================== */
 
 
+
 /* *************************************************************************************** */
+
 
 
 /* ================================3.Start Hero Section CSS================================= */
@@ -422,11 +421,11 @@ nav>ul>li .icon-nav-minus {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.4rem;
     margin-top: 3.125rem;
 }
 
-.icone-download {
+.icon-download {
     font-weight: 600;
 }
 
@@ -434,7 +433,7 @@ nav>ul>li .icon-nav-minus {
     display: flex;
     align-items: center;
     gap: .5rem;
-    padding: 1.0625rem 2.1875rem;
+    padding: 1.0625rem 2.1871rem;
     font-size: 0.9375rem;
     font-weight: 400;
     text-transform: capitalize;
@@ -453,7 +452,7 @@ nav>ul>li .icon-nav-minus {
 .hero-section-left div ul {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .9rem;
 }
 
 .hero-section-left div ul li a {
@@ -494,13 +493,13 @@ nav>ul>li .icon-nav-minus {
     scale: 1;
 }
 
-.hero-section-left-img-photo {
+.hero-section-left-img-phone {
     display: none;
     position: absolute;
     z-index: -5;
 }
 
-.hero-section-left-img-photo img {
+.hero-section-left-img-phone img {
     display: none;
 }
 
@@ -517,22 +516,22 @@ nav>ul>li .icon-nav-minus {
     z-index: 3;
 }
 
-.hero-section-left-img-photo img,
+.hero-section-left-img-phone img,
 .hero-section-right div img {
     width: 100%;
     border: #2a1454 2px solid;
-    border-radius: 2.5rem;
+    border-radius: 3.5rem;
     rotate: 5deg;
     transition: 0.5s;
 }
 
-.hero-section-left-img-photo img:hover,
+.hero-section-left-img-phone img:hover,
 .hero-section-right div img:hover {
     border: #8750f7 2px solid;
     rotate: 0deg;
 }
 
-.hero-section-left-img-photo::before,
+.hero-section-left-img-phone::before,
 .hero-section-right div::before {
     content: "";
     position: absolute;
@@ -546,7 +545,7 @@ nav>ul>li .icon-nav-minus {
 
 }
 
-.hero-section-left-img-photo::before {
+.hero-section-left-img-phone::before {
     display: none;
 }
 
@@ -592,7 +591,9 @@ nav>ul>li .icon-nav-minus {
 /* =================================3.End Hero Section CSS================================== */
 
 
+
 /* **************************************************************************************** */
+
 
 
 /* ==============================4.Start Services Section CSS============================= */
@@ -665,10 +666,11 @@ nav>ul>li .icon-nav-minus {
     width: 35%;
     font-size: 1.1rem;
     line-height: 1.5rem;
+    margin-right: 6.5rem;
 }
 
 .services-section .list-services div i {
-    margin-left: 6.5rem;
+    width: 5%;
     font-size: 2rem;
     color: #8750f7;
     rotate: 45deg;
@@ -693,7 +695,9 @@ nav>ul>li .icon-nav-minus {
 /* ===============================4.End Services Section CSS============================== */
 
 
+
 /* **************************************************************************************** */
+
 
 
 /* ===============================0.Start Media Screen CSS================================ */
@@ -701,14 +705,6 @@ nav>ul>li .icon-nav-minus {
 
 /* ------------------------------0_1.start media screen tablet----------------------------- */
 @media (max-width: 950px) {
-
-    /*************************** global ***************************/
-    /* .container {
-        width: 43rem;
-    } */
-
-    /* -----------------------------end--------------------------- */
-
 
     /*************************** header ***************************/
     nav ul {
@@ -726,8 +722,10 @@ nav>ul>li .icon-nav-minus {
 
     /************************ hero section *************************/
     .hero-section::before {
-        top: 10%;
-        font-size: 150px;
+        top: 23%;
+        right: 10%;
+        font-size: 180px;
+        font-weight: 700;
     }
 
     .hero-section-left span {
@@ -758,6 +756,33 @@ nav>ul>li .icon-nav-minus {
 
     /* -----------------------------end--------------------------- */
 
+
+    /************************ services section *************************/
+    .services-section .header-services p {
+        margin: auto;
+        width: 90%;
+    }
+
+    .services-section .list-services div {
+        height: 120px;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .services-section .list-services div p {
+        width: 47%;
+        font-size: 1.1rem;
+        margin-right: 0;
+    }
+
+    .services-section .list-services div h3 {
+        width: 40%;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    /* -----------------------------end--------------------------- */
+
 }
 
 /* -------------------------------0_1.end media screen tablet----------------------------- */
@@ -766,18 +791,10 @@ nav>ul>li .icon-nav-minus {
 /* ------------------------------0_2.start media screen mobile----------------------------- */
 @media (max-width:765px) {
 
-    /*************************** global ***************************/
-    /* .container {
-        width: 100%;
-        padding: 1.5rem;
-    } */
-
-    /* -----------------------------end--------------------------- */
-
 
     /*************************** header ***************************/
     header {
-        padding-top: 3.5rem;
+        padding-top: 2rem;
     }
 
     header .box-link-logo a {
@@ -793,8 +810,8 @@ nav>ul>li .icon-nav-minus {
     }
 
     .hero-section::after {
-        top: -5%;
-        right: 5%;
+        top: 2%;
+        right: 10%;
     }
 
     .hero-section-left {
@@ -807,7 +824,7 @@ nav>ul>li .icon-nav-minus {
 
     .hero-section-left h1 {
         font-size: 2.4rem;
-        width: 75%;
+        width: 80%;
     }
 
     .hero-section-left p {
@@ -821,7 +838,7 @@ nav>ul>li .icon-nav-minus {
         align-items: space-between;
     }
 
-    .hero-section-left .hero-section-left-img-photo {
+    .hero-section-left .hero-section-left-img-phone {
         margin: auto;
         width: 90%;
         display: block;
@@ -829,11 +846,15 @@ nav>ul>li .icon-nav-minus {
         z-index: 1;
     }
 
-    .hero-section-left-img-photo::after {
+    .hero-section-left-img-phone::after {
         display: block;
     }
 
-    .hero-section-left .hero-section-left-img-photo img {
+    .hero-section-left-img-phone::before {
+        display: inline;
+    }
+
+    .hero-section-left .hero-section-left-img-phone img {
         display: block;
         position: relative;
         z-index: 1;
@@ -865,6 +886,45 @@ nav>ul>li .icon-nav-minus {
 
     .hero-section-bottom ul li span {
         font-size: 1.05rem;
+    }
+
+    /* -----------------------------end--------------------------- */
+
+
+    /************************ services section *************************/
+    .services-section {
+        padding: 6rem 1rem;
+    }
+
+    .services-section .header-services h2 {
+        font-size: 2rem;
+    }
+
+    .services-section .header-services p {
+        width: 100%;
+    }
+
+    .services-section .list-services div {
+        padding-block: 1rem;
+        height: 160px;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .services-section .list-services div h3 {
+        width: 85%;
+        font-size: 1.5rem;
+    }
+
+    .services-section .list-services div p {
+        width: 90%;
+        font-size: 1.04rem;
+        margin: 0 1.1rem;
+        order: 1;
+    }
+
+    .services-section .list-services div i {
+        font-size: 1.5rem;
     }
 
     /* -----------------------------end--------------------------- */
