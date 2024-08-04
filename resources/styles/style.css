@@ -85,9 +85,25 @@
         6_2. header resume css
         6_3. resume widget css
 
-    0. Media Screen CSS
-        0_1. media screen tablet
-        0_2. media screen mobile
+    7.Skills Section CSS
+        7_1. global skills section css
+        7_2. header skills css
+        7_3. skills cards css
+    
+    10. Contact Section CSS
+        10_1. global contact section css
+        10_2. contact section left css
+        10_3. contact section right css
+
+    11. Footer CSS
+        11_1. global footer css
+        11_2. img footer css
+        11_3. nav footer css
+        11_4. copyright footer css
+
+    12. Media Screen CSS
+        12_1. media screen tablet
+        12_2. media screen mobile
 
     
 */
@@ -95,8 +111,7 @@
 
 
 
-
-/* ==================================1. Start Global CSS================================== */
+/* ===================================1.Start Global CSS================================== */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap');
@@ -130,7 +145,7 @@ ul {
 }
 
 
-/* ===================================1. end Global CSS=================================== */
+/* ===================================1.end Global CSS=================================== */
 
 
 
@@ -138,10 +153,10 @@ ul {
 
 
 
-/* ==================================1. Start Header CSS================================== */
+/* ===================================1.Start Header CSS================================== */
 
 
-/* ------------------------------2_1. start global header css----------------------------- */
+/* -------------------------------2_1.start global header css----------------------------- */
 header {
     width: 90%;
     display: flex;
@@ -154,10 +169,10 @@ header {
     z-index: 2;
 }
 
-/* -------------------------------2_1. end global header css------------------------------ */
+/* --------------------------------2_1.end global header css------------------------------ */
 
 
-/* ----------------------------------2_2. start logo css---------------------------------- */
+/* -----------------------------------2_2.start logo css---------------------------------- */
 header .logo {
     display: flex;
     align-items: center;
@@ -173,10 +188,10 @@ header .box-link-logo a {
     font-weight: 600;
 }
 
-/* -----------------------------------2_2. end logo css----------------------------------- */
+/* ------------------------------------2_2.end logo css----------------------------------- */
 
 
-/* -----------------------------------2_3. start nav css---------------------------------- */
+/* ------------------------------------2_3.start nav css---------------------------------- */
 
 
 nav,
@@ -227,10 +242,10 @@ nav>ul>li .icon-nav-minus {
     display: inline;
 }
 
-/* ------------------------------------2_3. end nav css----------------------------------- */
+/* -------------------------------------2_3.end nav css----------------------------------- */
 
 
-/* ---------------------------------2_4. start dropdown css-------------------------------- */
+/* ---------------------------------2_4.start dropdown css--------------------------------- */
 .dropdown-content {
     position: absolute;
     width: 200px;
@@ -276,10 +291,10 @@ nav>ul>li .icon-nav-minus {
     opacity: 1;
 }
 
-/* ----------------------------------2_4. end dropdown css--------------------------------- */
+/* -----------------------------------2_4.end dropdown css--------------------------------- */
 
 
-/* ------------------------------2_5. start header button css------------------------------ */
+/* --------------------------------2_5.start header button css------------------------------ */
 .header-btn {
     padding: .95rem 2.18rem;
     font-size: .93rem;
@@ -319,7 +334,7 @@ nav>ul>li .icon-nav-minus {
     color: #ffffffcc;
 }
 
-/* -------------------------------2_5. end header button css------------------------------- */
+/* --------------------------------2_5.end header button css------------------------------- */
 
 .nav-menu {
     font-size: 30px;
@@ -329,7 +344,7 @@ nav>ul>li .icon-nav-minus {
 }
 
 
-/* ===================================1. end Header CSS=================================== */
+/* ====================================1.end Header CSS=================================== */
 
 
 
@@ -972,10 +987,392 @@ nav>ul>li .icon-nav-minus {
 
 
 
-/* ===============================0.Start Media Screen CSS================================ */
+/* ===============================7.Start Skills Section CSS=============================== */
 
 
-/* ------------------------------0_1.start media screen tablet----------------------------- */
+
+/* ---------------------------7_1.start global skills section css-------------------------- */
+.skills-section {
+    width: 100%;
+    padding: 6rem 3rem 4rem 3rem;
+    background: #0f0715;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------7_1.end global skills section css--------------------------- */
+
+
+/* --------------------------------7_2.start header skills css----------------------------- */
+.skills-section .header-skllis {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.skills-section .header-skllis h2 {
+    width: fit-content;
+    margin: auto;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, #8851f7, #f4efff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.93rem;
+}
+
+.skills-section .header-skllis p {
+    margin: auto;
+    width: 80%;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+/* ---------------------------------7_2.end header skills css------------------------------ */
+
+
+/* ---------------------------------7_3.start skills cards css----------------------------- */
+.cards-skllls {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 2rem;
+}
+
+.skills-section .card-skill {
+    width: 11rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.skills-section .card-skill h3 {
+    font-size: 1rem;
+    color: #814cec;
+    font-weight: 400;
+}
+
+.skills-section .card-skill div {
+    width: 10rem;
+    padding: 30px 15px 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background: #8850f720;
+    opacity: .6;
+    filter: grayscale(90%);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .4s;
+}
+
+.skills-section .card-skill div:hover {
+    border: 1px solid #8850f7;
+    opacity: 1;
+    filter: grayscale(0%);
+    color: #8750f7;
+    background: #8850f74b;
+}
+
+.skills-section .card-skill div span {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.skills-section .card-skill div img {
+    width: 50%;
+    scale: 0.9;
+    transition: .4s;
+}
+
+.skills-section .card-skill div:hover img {
+    scale: 1.05;
+}
+
+/* ----------------------------------7_3.end skills cards css------------------------------ */
+
+
+
+/* =================================7.End Skills Section CSS=============================== */
+
+
+
+/* **************************************************************************************** */
+
+
+
+/* ===============================10.Start Contact Section CSS============================= */
+
+
+
+/* --------------------------10_1.start global contact section css------------------------- */
+.contact-section {
+    width: 100%;
+    background: #000;
+    padding: 6rem 2rem 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+/* ---------------------------10_1.end global contact section css-------------------------- */
+
+
+/* ----------------------------10_2.start contact section left css------------------------- */
+.contact-section .section-left {
+    width: 50%;
+    background: #0f0715;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 2rem;
+    padding: 2.25rem;
+}
+
+.contact-section .section-left h2 {
+    width: fit-content;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, #8851f7, #f4efff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.93rem;
+}
+
+.contact-section .section-left p {
+    width: 100%;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+.contact-section .section-left form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-section .section-left select,
+.contact-section .section-left textarea,
+.contact-section .section-left input {
+    width: calc((100% - 1rem) / 2);
+    background: #000;
+    font-size: 1em;
+    padding: 14px 20px;
+    border: 1px solid #222;
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.contact-section .section-left select {
+    width: 100%;
+}
+
+.contact-section .section-left textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 1.1em;
+    resize: none;
+}
+
+.contact-section .section-left textarea:focus,
+.contact-section .section-left input:focus {
+    border: 1px solid #8850f7;
+}
+
+.section-left .btn {
+    padding: 1.2rem 2.18rem;
+    margin-bottom: 1rem;
+    font-size: .95rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 40px;
+    background: #2a1454;
+    color: #fff;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.section-left .btn::after {
+    content: "";
+    width: .8rem;
+    height: 100%;
+    background: #8850f7ea;
+    box-shadow: 0 0 100px 70px #8850f7db;
+    filter: blur(10px);
+    position: absolute;
+    left: -10%;
+    top: 0;
+    z-index: -1;
+    transform: skew(10deg);
+    transition: .6s;
+}
+
+.section-left .btn:hover::after {
+    left: 100%;
+}
+
+.section-left .btn:hover {
+    color: #ffffffcc;
+}
+
+/* -----------------------------10_2.end contact section left css-------------------------- */
+
+
+/* ---------------------------10_3.start contact section right css------------------------- */
+.section-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section-right>div {
+    display: flex;
+    gap: 2rem;
+}
+
+.section-right>div .icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to top, #8851f7, #281136);
+    font-size: 1.25rem;
+}
+
+.section-right>div .des {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.section-right>div .des span {
+    color: #ddd;
+    text-transform: capitalize;
+}
+
+.section-right>div .des h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.section-right>div .des h3:hover {
+    color: #8850f7;
+}
+
+/* ----------------------------10_3.end contact section right css-------------------------- */
+
+
+
+/* ================================10.End Contact Section CSS============================== */
+
+
+
+/* **************************************************************************************** */
+
+
+
+/* ===================================11.Start Footer CSS================================== */
+
+
+/* -------------------------------11_1.start global footer css----------------------------- */
+footer {
+    width: 100%;
+    background: #0f0715;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+}
+
+/* --------------------------------11_1.end global footer css------------------------------ */
+
+
+/* ---------------------------------11_2.start img footer css------------------------------ */
+footer img {
+    width: 75px;
+}
+
+/* ----------------------------------11_2.end img footer css------------------------------- */
+
+
+/* ---------------------------------11_3.start nav footer css------------------------------ */
+footer ul {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+footer ul li a {
+    font-size: .99rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+footer ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #8750f7, #2a1454);
+    transition: .3s;
+}
+
+footer>ul>li.active::after,
+footer>ul>li:hover::after {
+    width: 100%;
+}
+
+/* ----------------------------------11_3.end nav footer css------------------------------- */
+
+
+/* -------------------------------11_4.start copyright footer css-------------------------- */
+footer p {
+    color: #8850f7;
+}
+
+/* --------------------------------11_4.end copyright footer css--------------------------- */
+
+
+/* ====================================11.End Footer CSS=================================== */
+
+
+
+/* **************************************************************************************** */
+
+
+
+/* ===============================12.Start Media Screen CSS================================ */
+
+
+/* ------------------------------12_1.start media screen tablet----------------------------- */
 @media (max-width: 950px) {
 
     /*************************** header ***************************/
@@ -1083,6 +1480,7 @@ nav>ul>li .icon-nav-minus {
 
     /* -----------------------------end--------------------------- */
 
+
     /************************ resume section ************************/
     .resume-section-header h2 {
         font-size: 2rem;
@@ -1101,12 +1499,26 @@ nav>ul>li .icon-nav-minus {
     }
 
     /* -----------------------------end--------------------------- */
+
+
+    /************************ contact section ************************/
+    .contact-section {
+        width: 100%;
+        background: #000;
+        padding: 6rem 1rem 6rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    /* -----------------------------end--------------------------- */
 }
 
-/* -------------------------------0_1.end media screen tablet----------------------------- */
+/* -------------------------------12_1.end media screen tablet----------------------------- */
 
 
-/* ------------------------------0_2.start media screen mobile----------------------------- */
+/* ------------------------------12_2.start media screen mobile----------------------------- */
 @media (max-width:765px) {
 
 
@@ -1303,9 +1715,66 @@ nav>ul>li .icon-nav-minus {
     }
 
     /* -----------------------------end--------------------------- */
+
+
+    /************************ contact section ************************/
+
+    /* -----------------------------end--------------------------- */
+    .skills-section .header-skllis h2 {
+        font-size: 2.2rem;
+    }
+
+    .skills-section .header-skllis p {
+        width: 100%;
+    }
+
+    /************************ contact section ************************/
+    .contact-section {
+        width: 100%;
+        background: #000;
+        padding: 6rem 1rem 6rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .contact-section .section-left {
+        width: 100%;
+        background: #0f0715;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .contact-section .section-left h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section .section-left input {
+        width: 100%;
+    }
+
+    .section-right {
+        order: -1;
+    }
+
+    /* -----------------------------end--------------------------- */
 }
 
-/* -------------------------------0_2.end media screen mobile----------------------------- */
+/* -------------------------------12_2.end media screen mobile----------------------------- */
 
 
-/* ================================0.End Media Screen CSS================================= */
+/* ================================12.End Media Screen CSS================================= */
