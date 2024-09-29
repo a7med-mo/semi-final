@@ -113,9 +113,6 @@
 
 /* ===================================1.Start Global CSS================================== */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -124,8 +121,11 @@
     scrollbar-color: #8750f7 #2a1454;
 }
 
+
 body {
     font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
@@ -142,6 +142,30 @@ a {
 
 ul {
     list-style: none;
+}
+
+
+.header-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header-section h2 {
+    width: fit-content;
+    margin: auto;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, #8851f7, #f4efff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.93rem;
+}
+
+.header-section p {
+    margin: auto;
+    width: 70%;
+    line-height: 1.5rem;
 }
 
 
@@ -439,11 +463,11 @@ nav>ul>li .icon-nav-minus {
 }
 
 .hero-section-left p {
-    width: 85%;
-    font-size: 1.35rem;
-    font-weight: 400;
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 300;
     color: #ddd;
-    line-height: 2rem;
+    line-height: 1.8rem;
 }
 
 .hero-section-left div {
@@ -606,6 +630,7 @@ nav>ul>li .icon-nav-minus {
 
 .hero-section-bottom ul li h3 {
     font-size: 3.5rem;
+    color: #ddd;
 }
 
 .hero-section-bottom ul li span {
@@ -613,6 +638,7 @@ nav>ul>li .icon-nav-minus {
     font-size: 1.10rem;
     font-weight: 400;
     line-height: 1.5rem;
+    color: #ddd;
 }
 
 /* ------------------------------3_4.end hero section bottom css---------------------------- */
@@ -631,7 +657,7 @@ nav>ul>li .icon-nav-minus {
 
 /* ------------------------------4_1.start global services css---------------------------- */
 .services-section {
-    padding: 6rem 3rem;
+    padding: 6rem 2.5rem;
     width: 100%;
     background: #000;
 }
@@ -640,36 +666,13 @@ nav>ul>li .icon-nav-minus {
 
 
 /* ------------------------------4_2.start header service css----------------------------- */
-.services-section .header-services {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.services-section .header-services h2 {
-    width: fit-content;
-    margin: auto;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #fff;
-    background: linear-gradient(to right, #8851f7, #f4efff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.93rem;
-}
-
-.services-section .header-services p {
-    margin: auto;
-    width: 80%;
-    line-height: 1.5rem;
-    letter-spacing: 1.5px;
-}
 
 /* -------------------------------4_2.end header service css------------------------------ */
 
 
 /* -------------------------------4_3.start service list css------------------------------ */
 .services-section .list-services div {
-    height: 120px;
+    height: 19vh;
     display: flex;
     gap: 3rem;
     align-items: center;
@@ -684,26 +687,27 @@ nav>ul>li .icon-nav-minus {
     width: 35%;
     font-size: 1.7rem;
     text-transform: capitalize;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .services-section .list-services div h3 span {
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #8750f7;
     margin-left: 1rem;
 }
 
 .services-section .list-services div p {
-    width: 35%;
-    font-size: 1.1rem;
+    width: 36%;
+    font-size: 1rem;
     line-height: 1.5rem;
     margin-right: 6.5rem;
 }
 
 .services-section .list-services div i {
     width: 5%;
-    font-size: 2rem;
+    font-size: 2.01rem;
+    font-weight: 100;
     color: #8750f7;
     rotate: 45deg;
 }
@@ -732,7 +736,7 @@ nav>ul>li .icon-nav-minus {
 
 
 
-/* ================================5.Start Works Section CSS=============================== */
+/** ================================5.Start Works Section CSS=============================== */
 
 
 /* ---------------------------5_1.start global works section css--------------------------- */
@@ -749,29 +753,6 @@ nav>ul>li .icon-nav-minus {
 
 
 /* --------------------------------5_2.start header works css------------------------------ */
-.works-section .header-works {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.works-section .header-works h2 {
-    width: fit-content;
-    margin: auto;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #fff;
-    background: linear-gradient(to right, #8851f7, #f4efff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.93rem;
-}
-
-.works-section .header-works p {
-    margin: auto;
-    width: 80%;
-    line-height: 1.5rem;
-    letter-spacing: 1.5px;
-}
 
 /* ---------------------------------5_2.end header works css------------------------------- */
 
@@ -785,7 +766,7 @@ nav>ul>li .icon-nav-minus {
 
 .works-section .group-btns button {
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: .9rem 1.5rem;
     border-radius: 30px;
     color: #fff;
@@ -891,13 +872,17 @@ nav>ul>li .icon-nav-minus {
     background: #000;
 }
 
+/* ----------------------------6_1.end global resume section css-------------------------- */
+
+
+/* -------------------------------6_2.start header resume css----------------------------- */
 .resume-section-header h2 {
     display: flex;
     align-items: center;
     gap: .5rem;
     width: fit-content;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #fff;
     background: linear-gradient(to right, #8851f7, #f4efff);
     -webkit-background-clip: text;
@@ -909,10 +894,6 @@ nav>ul>li .icon-nav-minus {
     width: 3rem;
 }
 
-/* ----------------------------6_1.end global resume section css-------------------------- */
-
-
-/* -------------------------------6_2.start header resume css----------------------------- */
 .resume-section-right,
 .resume-section-left {
     width: 100%;
@@ -1006,29 +987,6 @@ nav>ul>li .icon-nav-minus {
 
 
 /* --------------------------------7_2.start header skills css----------------------------- */
-.skills-section .header-skllis {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.skills-section .header-skllis h2 {
-    width: fit-content;
-    margin: auto;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #fff;
-    background: linear-gradient(to right, #8851f7, #f4efff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.93rem;
-}
-
-.skills-section .header-skllis p {
-    margin: auto;
-    width: 80%;
-    line-height: 1.5rem;
-    letter-spacing: 1.5px;
-}
 
 /* ---------------------------------7_2.end header skills css------------------------------ */
 
@@ -1109,6 +1067,261 @@ nav>ul>li .icon-nav-minus {
 
 
 
+.comments-section {
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 7rem 2rem 5rem 2rem;
+}
+
+.comments-section .header-comments {
+    width: 40%;
+}
+
+.comments-section .header-comments h2 {
+    width: 100%;
+    margin: auto;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, #8851f7, #f4efff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.93rem;
+}
+
+.comments-section .header-comments p {
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+
+.comments-section .box-comments {
+    width: 58%;
+    display: flex;
+    gap: 2rem;
+}
+
+.box-comments .comment {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background: #15091d;
+    padding: 1.5rem 2rem;
+}
+
+.box-comments .comment .header-comment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.comment .header-comment .box-img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5px 5px 5px;
+    border-bottom-left-radius: 150%;
+    overflow: hidden;
+}
+
+.comment .header-comment .box-img img {
+    width: 100%;
+}
+
+.comment .header-comment .box-logo {
+    width: 55%;
+}
+
+.comment .header-comment .box-logo img {
+    width: 100%;
+}
+
+.comment .body-comment p {
+    font-size: 1.09rem;
+    line-height: 1.5rem;
+    margin-bottom: 3.5rem;
+    color: #dddddd;
+}
+
+.comment .footer-comment h4 {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+.comment .footer-comment span {
+    font-size: .9rem;
+    line-height: 1.3rem;
+    margin-bottom: 3.5rem;
+    color: #dddddd;
+}
+
+
+
+/* **************************************************************************************** */
+
+
+.blogs-section {
+    width: 100%;
+    padding: 6rem 3rem 4rem 3rem;
+    background: #0f0715;
+}
+
+
+.blogs-section .cards-blogs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.blogs-section .card-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: ((100% - 1.5rem) / 3);
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.blogs-section .box-img {
+    width: 100%;
+    transition: 1s;
+}
+
+.card-blog:hover .box-img {
+    scale: 1.13;
+}
+
+.blogs-section .card-blog img {
+    width: 100%;
+    scale: 1;
+}
+
+.card-blog .card-content {
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: .75rem;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.card-blog .card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: .35rem;
+}
+
+.card-blog .card-content ul {
+    font-size: .9rem;
+    color: #8850f7;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .6rem;
+    transition: .5s;
+}
+
+.card-blog .card-content ul a {
+    color: #8850f7;
+    transition: .5s;
+}
+
+
+
+.card-blog .card-content .hover-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background: #2a1454;
+    bottom: 0;
+    padding: .9rem 1.1rem;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.card-blog .card-content .hover-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #8750f7, #281745);
+    opacity: 0;
+    transition: .5s;
+}
+
+.card-blog:hover.card-blog .card-content ul,
+.card-blog:hover.card-blog .card-content ul a,
+.card-blog:hover .card-content .hover-box:after {
+    color: #fff;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.blogs-section .card-blog .box-link {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 20px;
+}
+
+.blogs-section .card-blog .box-link .hover-link {
+    font-size: .8rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    background: #281745;
+    border-radius: 20px;
+    padding: .3rem .5rem;
+    overflow: hidden;
+}
+
+.blogs-section .card-blog .box-link .hover-link::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 0 30px 75px #8850f7;
+    opacity: 1;
+    transition: .5s;
+}
+
+.blogs-section .card-blog .box-link .hover-link:hover::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 0 30px 45px #8850f7;
+    opacity: 1;
+    transition: .5s;
+}
+
+
+/* **************************************************************************************** */
+
+
+
 /* ===============================10.Start Contact Section CSS============================= */
 
 
@@ -1153,9 +1366,8 @@ nav>ul>li .icon-nav-minus {
 
 .contact-section .section-left p {
     width: 100%;
-    font-size: .9rem;
+    font-size: .99rem;
     line-height: 1.5rem;
-    letter-spacing: 1.5px;
 }
 
 .contact-section .section-left form {
@@ -1275,7 +1487,7 @@ nav>ul>li .icon-nav-minus {
 
 .section-right>div .des h3 {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -1778,3 +1990,5 @@ footer p {
 
 
 /* ================================12.End Media Screen CSS================================= */
+
+
